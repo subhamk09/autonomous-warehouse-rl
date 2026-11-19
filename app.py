@@ -125,7 +125,7 @@ with left:
     for i,rb in enumerate(sim["robots"]): view[rb["pos"]]=[0.15,0.75,0.95] if not rb["failed"] else [0.8,0.2,0.8]
     fig,ax=plt.subplots(figsize=(9,5)); ax.imshow(view, interpolation="nearest")
     ax.set_xticks(range(sim["grid"].shape[1])); ax.set_yticks(range(sim["grid"].shape[0])); ax.grid(color="#64748b",alpha=.35)
-    ax.set_title("Red: blocked • Yellow: order • Cyan: robot • Purple: failed")
+    ax.set_title("Red: blocked • Yellow: order • Cyan: robot • white: failed")
     st.pyplot(fig); plt.close(fig)
 with right:
     st.subheader("Robot fleet")
